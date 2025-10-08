@@ -22,11 +22,14 @@
 
     <section class="bg-light">
       <div class="container mt-5">
-        <h2>Login</h2>
-        <input id="login-username" class="form-control mb-2" placeholder="Username">
-        <input id="login-password" type="password" class="form-control mb-2" placeholder="Password">
-        <button onclick="login()" class="loginBtn">Login</button>
-        <p>Don't have an account? <a class="backToReg" href="register.html">Register</a></p>
+        <form onsubmit="login(event)">
+          <h2>Login</h2>
+          <input id="login-username" class="form-control mb-2" placeholder="Username">
+          <input id="login-password" type="password" class="form-control mb-2" placeholder="Password">
+          <button type="submit" class="loginBtn">Login</button>
+          <p id="log-message" class="mt-3"></p>
+          <p>Don't have an account? <a class="backToReg" href="register.html">Register</a></p>
+        </form>
       </div>
     </section>
 
@@ -37,7 +40,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/auth.js"></script>
 </body>
 </html>
