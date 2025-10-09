@@ -8,12 +8,18 @@ document.getElementById("welcome").textContent = `Welcome, ${currentUser}!`;
 
 let exercise = JSON.parse(localStorage.getItem("exercises_" + currentUser)) || [];
 
-function addExercise(){
+function addExercise(event){
+    event.preventDefault();
+
+    const message = document.getElementById("log-message")
+
     const name = document.getElementById("exercise").value.trim();
     const reps = parseInt(document.getElementById("reps").value);
 
+    message.textContent = "";
+
     if(!name || isNaN(reps) || reps <= 0){
-        alert("Please enter exercise and reps")
+        message.textContent = "Please enter exercise and reps"
         return
     }
     exercise.push({name, reps});
@@ -27,7 +33,7 @@ function addExercise(){
 function render(){
     let logDiv = document.getElementById("log")
     logDiv.innerHTML = "";
-
+    
     let total = 0
     exercise.forEach((ex) =>{
         total += ex.reps;
