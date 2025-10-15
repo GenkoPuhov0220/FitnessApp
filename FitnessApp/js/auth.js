@@ -46,6 +46,6 @@ function login(event){
 
     localStorage.setItem("currentUser", username)
     setTimeout(() => {
-        window.location.href = "app.html";
+        window.location.href = "dashboard.html";
     }, 500)
 }
