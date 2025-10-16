@@ -41,7 +41,6 @@ html, body {
   text-align: center;
 }
 
-
 .navbar button {
   margin-left: 5px; 
   padding: 5px 10px; 
@@ -50,6 +49,12 @@ html, body {
 .navbar .navbar-nav {
   margin-left: 0;
   margin-right: 0;
+}
+.backBtn{
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  
 }
 
 .sections {

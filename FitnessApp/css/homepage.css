@@ -103,7 +103,7 @@ html, body {
 
 
 .card-simple {
-  background: rgba(238, 235, 235, 0.1);
+  background: rgb(194, 191, 191);
   border-radius: 10px;
   transition: transform 0.3s ease, background 0.3s ease;
 }
