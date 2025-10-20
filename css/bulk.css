@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  /*background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1920&q=80')
+    no-repeat center center fixed;*/
+  background: linear-gradient(135deg, #000 50%, #e53935 50%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  padding: 5px;
+  margin: 0;
+  width: 100%; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;  
+  width: 100%; 
+  padding: 0 15px;
+}
+
+.navbar .collapse {
+  display: flex;
+  justify-content: flex-end;  
+  gap: 20px;  
+}
+
+#welcome {
+  margin: 0;  
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+}
+
+
+.navbar button {
+  margin-left: 5px; 
+  padding: 5px 10px; 
+}
+
+.navbar .navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container h2{
+  color: white;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  margin-top: auto; 
+}
+
+.footer .overlay-footer {
+  display: none;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+/* Основен стил на модала */
+.modal-content {
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background: #fffaf9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Анимация на модал диалога */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Хедър на модала */
+.modal-header {
+  color: white;
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Затварящ бутон */
+.btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Тяло на модала */
+.modal-body {
+  font-size: 1.1rem;
+  color: #333;
+  padding: 1.8rem 2rem;
+  line-height: 1.5;
+}
+
+/* Персонализиране според типа програма */
+.modal-content.beginners {
+  border-color: #dc3545;
+}
+.modal-header.beginners {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediate {
+  border-color: #ffc107;
+}
+.modal-header.intermediate {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advanced {
+  border-color: #198754;
+}
+.modal-header.advanced {
+  background-color: #198754;
+}
+
+/* Примерен стил на линкове и списъци вътре в модала */
+.modal-body ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+.modal-body ul li {
+  margin-bottom: 0.5rem;
+}
