@@ -1,3 +1,6 @@
+let currentUser = localStorage.getItem("currentUser");
+document.getElementById("welcome").textContent = `Welcome, ${currentUser}!`;
+
 document.querySelectorAll(".see-program-btn").forEach(btn => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();  // спирай нормалното поведение на линка
