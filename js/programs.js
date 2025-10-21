@@ -3,19 +3,19 @@ document.getElementById("welcome").textContent = `Welcome, ${currentUser}!`;
 
 document.querySelectorAll(".see-program-btn").forEach(btn => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault();  // спирай нормалното поведение на линка
-    const key = btn.getAttribute("data-program");  // вземи ключа за програмата от data атрибута
+    e.preventDefault();
+    const key = btn.getAttribute("data-program");
     const modal = document.getElementById("programModal");
     const modalTitle = modal.querySelector("#programModalLabel");
     const modalBody = modal.querySelector("#programModalBody");
     const modalContent = modal.querySelector(".modal-content");
     const modalHeader = modal.querySelector(".modal-header");
 
-    // Премахваме всички класове за програми
+    
     modalContent.classList.remove("beginners", "intermediate", "advanced");
     modalHeader.classList.remove("beginners", "intermediate", "advanced");
 
-    // Примерни програми
+  
     const programs = {
       beginnersBulk: {
         title: "Beginners Program",
