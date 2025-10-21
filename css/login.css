@@ -8,6 +8,7 @@ html, body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  padding-top: 35px;
 }
 .navbar {
   padding: 5px; 
