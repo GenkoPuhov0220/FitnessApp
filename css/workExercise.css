@@ -95,7 +95,7 @@ html, body {
 
 .container h2{
     color: white;
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 15px #ff000099;
 }
 
 .card-simple {
@@ -125,3 +125,34 @@ html, body {
   margin: 0;
   font-size: 1rem;
 }
+
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Space between buttons */
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.btn-group .btn {
+  flex: 1;
+  min-width: 110px;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-pink {
+  background-color: #ff000099;
+  color: #fff;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.btn-pink:hover {
+  background-color: #ff000099;
+  color: #fff;
+  box-shadow: 0 0 10px #ff000099;
+}
+  

@@ -115,7 +115,7 @@ html, body {
 }
 
 /* Персонализиране според типа програма */
-/* Bulk */
+/* Bulk  for men */
 .modal-content.beginnersBulk {
   border-color: #dc3545;
 }
@@ -138,7 +138,7 @@ html, body {
   background-color: #198754;
 }
 
-/* Cut */
+/* Cut for men  */
 .modal-content.beginnerCut {
   border-color: #dc3545;
 }
@@ -161,29 +161,101 @@ html, body {
   background-color: #198754;
 }
 
-/* Maintenance / Recomp */
+/* Maintenance / Recomp  for men */
 
-.modal-content.beginnersMaintenance {
+.modal-content.beginnersRecomp {
   border-color: #dc3545;
 }
-.modal-header.beginnersMaintenance  {
+.modal-header.beginnersRecomp  {
   background-color: #dc3545;
 }
 
-.modal-content.intermediateMaintenance  {
+.modal-content.intermediateRecomp  {
   border-color: #ffc107;
 }
-.modal-header.intermediateMaintenance  {
+.modal-header.intermediateRecomp  {
   background-color: #ffc107;
   color: #212529;
 }
 
-.modal-content.advancedMaintenance  {
+.modal-content.advancedRecomp  {
   border-color: #198754;
 }
-.modal-header.advancedMaintenance  {
+.modal-header.advancedRecomp  {
   background-color: #198754;
 }
+
+/* Bulk  for women  */
+.modal-content.beginnersWomenBulk {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenBulk {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenBulk {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenBulk {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenBulk {
+  border-color: #198754;
+}
+.modal-header.advancedWomenBulk {
+  background-color: #198754;
+}
+
+/* Cut for women  */
+.modal-content.beginnersWomenCut {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenCut  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenCut  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenCut  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenCut  {
+  border-color: #198754;
+}
+.modal-header.advancedWomenCut  {
+  background-color: #198754;
+}
+
+/* Maintenance / Recomp  for women */
+
+.modal-content.beginnersWomenRecomp {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenRecomp  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenRecomp  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenRecomp  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenRecomp  {
+  border-color: #198754;
+}
+.modal-header.advancedWomenRecomp  {
+  background-color: #198754;
+}
+
+
 
 /*линкове и списъци вътре в модала */
 .modal-body ul {
@@ -193,3 +265,4 @@ html, body {
 .modal-body ul li {
   margin-bottom: 0.5rem;
 }
+
