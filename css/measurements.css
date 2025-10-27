@@ -1,0 +1,125 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  background: linear-gradient(135deg, #000 50%, #e53935 50%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+    padding-top: 35px;
+}
+.navbar {
+  padding: 5px;
+  margin: 0;
+  width: 100%; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;  
+  width: 100%; 
+  padding: 0 15px;
+}
+
+.navbar button {
+  margin-left: 5px; 
+  padding: 5px 10px; 
+}
+
+.navbar .navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
+}
+#welcome {
+  margin: 0;  
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+}
+
+/* Form */
+.measurements-section {
+  padding: 60px 0; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
+}
+
+.measurements-card {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 20px;
+  max-width: 400px; 
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 5%;
+}
+
+.measurements-card h5 {
+  font-size: 1.25rem;
+  color: #ff6347;
+  text-align: center;
+}
+
+.measurements-card input,
+.measurements-card button {
+  margin-bottom: 12px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.measurements-card button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+}
+
+.measurements-card button:hover {
+  background-color: #e53e3e;
+}
+
+/* Image Section */
+.image-container {
+  text-align: center;
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;  
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  margin-top: auto; 
+}
+
+.footer .overlay-footer {
+  display: none;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}

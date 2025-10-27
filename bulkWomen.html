@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Fitness Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/programs.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger" href="index.html">Fitness Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <span id="welcome">Welcome !</span>
+        <div class="navbar-nav ms-auto">
+          <a href="#" id="backBtn" class="btn btn-danger p-1 m-1">Saved</a>
+          <a href="workExercise.html" id="backBtn" class="btn btn-danger p-1 m-1">Back</a>
+          <button class="btn btn-danger p-1 m-1" onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="py-5 mt-5">
+  <div class="container mx-auto text-center">
+    
+    <h2 class="fw-bold mb-5 text-uppercase">Muscle Building Programs for women</h2>
+
+
+    <div class="row g-4 justify-content-center centered-columns w-100">
+            <div class="col-md-4">
+                <div class="card h-100 border-danger">
+                    <div class="card-body">
+                    <h5 class="card-title text-danger fw-bold">
+                        <i class="bi bi-person-plus-fill me-2"></i>Beginners
+                    </h5>
+                    <ul class="card-text">
+                        ✅ 3 Full-Body Strength Sessions per Week<br>
+                        ✅ Learn Form & Build Foundational Strength<br>
+                        ✅ Focus on Glutes, Legs & Core<br>
+                        ✅ Increase Weight Each Week
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>🏋️‍♀️ Squat, Dumbbell Bench Press, Bent-Over Row</li>
+                        <li>🍑 Glute Bridge, Dumbbell Shoulder Press</li>
+                        <li>🗓️ Mon / Wed / Fri</li>
+                    </ul>
+                    <a href="#" class="btn btn-danger mt-3 see-program-btn" data-program="beginnersWomenBulk">See the program</a>
+                </div>
+          </div>
+        </div>
+
+       <div class="col-md-4">
+          <div class="card h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title text-warning fw-bold">
+                <i class="bi bi-people-fill me-2"></i>Intermediate
+              </h5>
+              <ul class="card-text">
+                ✅ 4-Day Upper/Lower Split<br>
+                ✅ Progressive Overload on Compounds<br>
+                ✅ Glutes & Shoulders Emphasis<br>
+                ✅ Combine Heavy Lifts with Isolation
+              </ul>
+              <ul class="list-unstyled">
+                <li>🍑 Hip Thrusts, Deadlifts, Bulgarian Split Squats</li>
+                <li>💪 Bench Press, Pull-Ups, Lateral Raises</li>
+                <li>🗓️ Mon / Tue / Thu / Fri</li>
+              </ul>
+              <a href="#" class="btn btn-warning mt-3 see-program-btn" data-program="intermediateWomenBulk">See the program</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-success">
+            <div class="card-body">
+              <h5 class="card-title text-success fw-bold">
+                <i class="bi bi-lightning-fill me-2"></i>Advanced
+              </h5>
+              <ul class="card-text">
+                ✅ Push/Pull/Legs – 6 sessions per week<br>
+                ✅ High Volume Hypertrophy Workouts<br>
+                ✅ Heavy Compounds + Accessory Isolation<br>
+                ✅ Track Weight Progression Weekly
+              </ul>
+              <ul class="list-unstyled">
+                <li>🔥 Barbell Squat, Romanian Deadlift, Hip Thrust</li>
+                <li>💥 Bench Press, Pull-Downs, Dumbbell Rows</li>
+                <li>💃 Accessory Work: Cables, Kickbacks, Curls</li>
+                <li>🗓️ Mon–Sat (Sunday Rest)</li>
+              </ul>
+              <a href="#" class="btn btn-success mt-3 see-program-btn" data-program="advancedWomenBulk">See the program</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="programModal" tabindex="-1" aria-labelledby="programModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="programModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="programModalBody">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+  <footer class="footer text-white text-center py-3">
+    <div class="overlay-footer"></div>
+    <div class="container position-relative">
+      <p class="mb-0">© 2025 Fitness Tracker</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/programsWomen.js"></script>
+</body>
+</html>

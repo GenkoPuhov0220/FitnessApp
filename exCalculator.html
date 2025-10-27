@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Tracker 🏋️</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger" href="index.html">Fitness Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <span id="welcome">Welcome !</span>
+       <div class="navbar-nav ms-auto">
+         <a href="dashboard.html" id="backBtn" class="btn btn-danger p-1 m-1">Back</a>
+         <button class="btn btn-danger p-1 m-1" onclick="logout()">Logout</button>
+       </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <section class="sections">
+    <div class="container2">
+      <h1>Exercise Calculator</h1>
+      <p id="log-message" class="mt-3"></p>
+      <div class="form-container">
+        <form onsubmit="addExercise(event)">
+          <input id="exercise" type="text" placeholder="Exercise">
+          <input id="reps" type="number" placeholder="count">
+          <button type ="submit">Add</button>
+          <button type ="button" onclick="clearAll()">Clear All</button>
+        </form>
+      </div>
+      <div id="log"></div>
+      <div class="total" id="total">Total reps: 0</div>
+    </div>
+  </section>
+
+  <div id="clearConfirmation" class="clear-confirmation-overlay">
+    <div class="clear-confirmation-modal">
+      <p>Are you sure you want to delete all exercises?</p>
+      <form id ="clearForm">
+        <button type="submit" class="btn btn-danger">Yes, clear all</button>
+        <button type="button" class="btn btn-secondary" onclick="cancelClear()">Cancel</button>
+      </form> 
+    </div>
+  </div>
+
+
+  <footer class="footer text-white text-center py-3">
+    <div class="overlay-footer"></div>
+    <div class="container position-relative">
+      <p class="mb-0">© 2025 Fitness Tracker</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/exCalculator.js"></script> 
+</body>
+</html>

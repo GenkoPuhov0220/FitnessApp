@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1920&q=80')
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+    padding-top: 35px;
+}
+.navbar {
+  padding: 5px; 
+  margin: 0; 
+  width: 100%; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;  
+  width: 100%; 
+  padding: 0 15px;
+}
+
+#welcome {
+  margin: 0; 
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+}
+
+
+.navbar button {
+  margin-left: 5px;  
+  padding: 5px 10px; 
+}
+
+.navbar .navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bg-light{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  margin: auto;
+}
+
+.bg-light .container{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  color: white;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+
+}
+.registerBtn{
+  background-color: #dc3545;
+  border: none;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.registerBtn:hover {
+  background-color: #ff4757;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+}
+
+#reg-message {
+  font-weight: 600;
+  margin-top: 10px;
+  min-height: 20px;
+}
+.btnForLog{
+  color: gray;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  margin-top: auto; 
+}
+
+.footer .overlay-footer {
+  display: none;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}

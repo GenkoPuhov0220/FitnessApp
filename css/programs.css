@@ -1,0 +1,268 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #000 50%, #e53935 50%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+.navbar {
+  padding: 5px;
+  margin: 0;
+  width: 100%; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;  
+  width: 100%; 
+  padding: 0 15px;
+}
+
+#welcome {
+  margin: 0;  
+  font-size: 1.0rem;
+  color: white;
+  text-align: center;
+}
+
+
+.navbar button {
+  margin-left: 5px; 
+  padding: 5px 10px; 
+}
+
+.navbar .navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container h2{
+  color: white;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  margin-top: auto; 
+}
+
+.footer .overlay-footer {
+  display: none;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+
+.modal-content {
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background: #fffaf9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.modal-header {
+  color: white;
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+
+.btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.btn-close:hover {
+  opacity: 1;
+}
+
+
+.modal-body {
+  font-size: 1.1rem;
+  color: #333;
+  padding: 1.8rem 2rem;
+  line-height: 1.5;
+}
+
+/* Персонализиране според типа програма */
+/* Bulk  for men */
+.modal-content.beginnersBulk {
+  border-color: #dc3545;
+}
+.modal-header.beginnersBulk {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateBulk {
+  border-color: #ffc107;
+}
+.modal-header.intermediateBulk {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedBulk {
+  border-color: #198754;
+}
+.modal-header.advancedBulk {
+  background-color: #198754;
+}
+
+/* Cut for men  */
+.modal-content.beginnerCut {
+  border-color: #dc3545;
+}
+.modal-header.beginnerCut  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateCut  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateCut  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedCut  {
+  border-color: #198754;
+}
+.modal-header.advancedCut  {
+  background-color: #198754;
+}
+
+/* Maintenance / Recomp  for men */
+
+.modal-content.beginnersRecomp {
+  border-color: #dc3545;
+}
+.modal-header.beginnersRecomp  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateRecomp  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateRecomp  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedRecomp  {
+  border-color: #198754;
+}
+.modal-header.advancedRecomp  {
+  background-color: #198754;
+}
+
+/* Bulk  for women  */
+.modal-content.beginnersWomenBulk {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenBulk {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenBulk {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenBulk {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenBulk {
+  border-color: #198754;
+}
+.modal-header.advancedWomenBulk {
+  background-color: #198754;
+}
+
+/* Cut for women  */
+.modal-content.beginnersWomenCut {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenCut  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenCut  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenCut  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenCut  {
+  border-color: #198754;
+}
+.modal-header.advancedWomenCut  {
+  background-color: #198754;
+}
+
+/* Maintenance / Recomp  for women */
+
+.modal-content.beginnersWomenRecomp {
+  border-color: #dc3545;
+}
+.modal-header.beginnersWomenRecomp  {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateWomenRecomp  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateWomenRecomp  {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedWomenRecomp  {
+  border-color: #198754;
+}
+.modal-header.advancedWomenRecomp  {
+  background-color: #198754;
+}
+
+
+
+/*линкове и списъци вътре в модала */
+.modal-body ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+.modal-body ul li {
+  margin-bottom: 0.5rem;
+}
+
