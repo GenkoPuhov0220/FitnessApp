@@ -56,5 +56,13 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.post('/logout', (req, res) => {
+    // Clear the cookie that holds the JWT (if using cookies)
+    res.clearCookie('jwt');
+
+    // Send a success message back
+    res.status(200).json({ message: 'Successfully logged out' });
+});
+
 // 👇 important
 export default router;

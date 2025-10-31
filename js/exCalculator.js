@@ -82,9 +82,9 @@ function cancelClear(){
   document.getElementById('clearConfirmation').style.display = 'none';
 }
 
-function logout() {
-  localStorage.removeItem("currentUser");
-  window.location.href = "index.html";
-}
+//function logout() {
+ // localStorage.removeItem("currentUser");
+//  window.location.href = "index.html";
+//}
 
 render();

@@ -89,3 +89,11 @@ async function login(event) {
     message.style.color = "#ff4d4d";
   }
 }
+
+async function logout() {
+    // Clear JWT token from storage (localStorage or sessionStorage)
+    localStorage.removeItem('jwt'); // or sessionStorage.removeItem('jwt');
+
+    // Redirect the user to the login page
+    window.location.href = 'login.html';
+}
