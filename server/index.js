@@ -5,6 +5,7 @@ import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import exerciseRoutes from './routes/exerciseRoutes.js';
+import measurementRoutes from './routes/measurementRoutes.js';
 
 dotenv.config();
 
@@ -30,7 +31,7 @@ mongoose.connect(process.env.MONGO_URI, {
 // --- Routes ---
 app.use("/api/auth", authRoutes);
 app.use('/api/exercises', exerciseRoutes);
-
+app.use('/api/measurements', measurementRoutes);
 
 // --- Start server ---
 const PORT = process.env.PORT || 5000;

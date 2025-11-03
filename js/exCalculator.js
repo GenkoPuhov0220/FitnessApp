@@ -9,6 +9,8 @@ let exercise = [];
 
 // Fetch all exercises from MongoDB when page loads
 async function fetchExercises() {
+
+  
   try {
     const res = await fetch(`http://localhost:5000/api/exercises/${currentUser}`);
     exercise = await res.json();

@@ -75,6 +75,7 @@ async function login(event) {
 
       // Optionally save logged-in user (or token)
       localStorage.setItem("currentUser", username);
+      localStorage.setItem("id", data.userId);
 
       setTimeout(() => {
         window.location.href = "dashboard.html";
