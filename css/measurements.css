@@ -107,6 +107,54 @@ html, body {
   margin: 0 auto;  
 }
 
+/* Measurements table*/
+.measurements-log-section {
+  position: fixed;
+  top: 100px; 
+  right: 20px; 
+  margin-top: 30px;
+  background-color: #e53935; 
+  padding: 50px;
+  color: white;
+  border-radius: 8px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+
+.measurements-log .card {
+  background-color: #e53935; 
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.measurements-log .card p {
+  margin: 0;
+  font-size: 1rem; 
+}
+
+.measurements-log .btn-danger {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  background-color: #ff6347; 
+  border: none;
+}
+
+.measurements-log .btn-danger:hover {
+  background-color: #e53e3e; 
+}
+@media (max-width: 768px) {
+  .measurements-log-section {
+    width: 100%; 
+    margin-top: 20px;
+  }
+
+  .measurements-log .card {
+    padding: 10px;
+  }
+}
+
 /* Footer */
 .footer {
   position: relative;
