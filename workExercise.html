@@ -78,12 +78,41 @@
             <h5 class="fw-bold text-danger">🏋️‍♂️ Create your own workout</h5>
             <p>Sabilize Your Weight, Improve Tone & Boost Fitness</p>
             <div class="btn-group d-flex justify-content-center mt-3 mb-2">
-            <a href="#" class="btn btn-pink">Let's go</a>
+            <button class="btn btn-danger" id="openCreateWorkout">Let's go</button>
+            <button id="viewWorkouts" class="btn btn-danger">View My Workouts</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <!-- Create Program Modal -->
+<div class="modal fade" id="createProgramModal" tabindex="-1" aria-labelledby="createProgramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="createProgramLabel">Create Your Workout</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="createProgramForm">
+          <div class="mb-3">
+            <label for="programTitle" class="form-label">Program Title</label>
+            <input type="text" class="form-control" id="programTitle" placeholder="e.g. My Strength Routine">
+          </div>
+          <div class="mb-3">
+            <label for="programDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="programDescription" rows="5" placeholder="Describe your workout..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">Save Program</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <section id="myPrograms" class="container mt-4">
+    <h3 class="text-center text-light mb-4">My Custom Workouts</h3>
+    <div id="programList" class="row mt-3" style="display: none;"></div>
   </section>
 
   <footer class="footer text-white text-center py-3">
@@ -95,6 +124,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
    <script src="js/programsMen.js"></script>
-     <script src="js/auth.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/program.js"></script>
 </body>
 </html>

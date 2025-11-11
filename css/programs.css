@@ -266,3 +266,51 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
+
+#myPrograms .card {
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  background-color: #fffaf9;
+  border: 2px solid #e53935;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+#myPrograms .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(229, 57, 53, 0.4);
+}
+
+#myPrograms h5 {
+  color: #e53935;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#myPrograms p {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+#programList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#programList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
