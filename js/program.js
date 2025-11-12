@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const username = localStorage.getItem("currentUser");
 
     if (!title || !description || !username) {
-      alert("Please fill all fields!");
+      document.getElementById("message").innerHTML = `<div class="alert alert-danger">Please fill all fields.</div>`;
       return;
     }
 
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
         loadMyPrograms();
       } else {
-        alert(data.message || "Error saving program");
+        document.getElementById("message").innerHTML = `<div class="alert alert-danger">Please enter valid numbers for all measurements.</div>`;
       }
     } catch (err) {
       console.error("Error:", err);
-      alert("Server error, please try again later.");
+      document.getElementById("message").innerHTML = `<div class="alert alert-danger">An error occurred. Please try again.</div>`;
     }
   });
 
@@ -115,18 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Delete program
   async function deleteProgram(id) {
-    if (!confirm("Are you sure you want to delete this program?")) return;
-
     try {
       const response = await fetch(`http://localhost:5000/api/programs/${id}`, { method: "DELETE" });
-      const data = await response.json();
-
-      if (response.ok) {
-        alert("Program deleted successfully!");
-        loadMyPrograms();
-      } else {
-        alert(data.message || "Error deleting program");
-      }
+      loadMyPrograms();
+      
     } catch (err) {
       console.error("Error deleting program:", err);
     }
@@ -146,5 +138,4 @@ document.getElementById("viewWorkouts").addEventListener("click", async () => {
     document.getElementById("viewWorkouts").innerText = "View My Workouts";
   }
 });
-  //loadMyPrograms();
 });
