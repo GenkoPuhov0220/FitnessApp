@@ -79,7 +79,7 @@
             <p>Sabilize Your Weight, Improve Tone & Boost Fitness</p>
             <div class="btn-group d-flex justify-content-center mt-3 mb-2">
             <button class="btn btn-danger" id="openCreateWorkout">Let's go</button>
-            <button id="viewWorkouts" class="btn btn-danger">View My Workouts</button>
+            <button id="viewWorkouts" class="btn btn-danger">View My Meal plan</button>
             </div>
           </div>
         </div>
@@ -111,11 +111,102 @@
     </div>
   </div>
 </div>
-  <section id="myPrograms" class="container mt-4">
-    <h3 class="text-center text-light mb-4">My Meals Plan</h3>
-    <div id="programList" class="row mt-3" style="display: none;"></div>
-  </section>
 
+<button id="openCalorieModal" class="btn btn-danger" 
+style="position: fixed; bottom: 20px; right: 20px; border-radius:50%; width:50px; height:50px;">
+🔥
+</button>
+<button id="toggleTableBtn" class="btn btn-danger btn-sm">📊</button>
+
+<section id="myPrograms" class="container mt-4">
+  <h3 class="text-center text-light mb-4">My Meals Plan</h3>
+  <div id="programList" class="row mt-3" style="display: none;"></div>
+</section>
+
+<!-- Table of Calorie Entries -->
+ <div class="modal fade" id="calorieTableModal" tabindex="-1" aria-labelledby="calorieTableModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- По-голям прозорец за таблицата -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="calorieTableModalLabel">Your Calorie Entries</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Height</th>
+              <th>Weight</th>
+              <th>Activity Level</th>
+              <th>Goal</th>
+              <th>Calories</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="calorieTableBody">
+            <!-- Данните ще се добавят чрез JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Calorie Calculator Modal -->
+<div class="modal fade" id="calorieModal" tabindex="-1" aria-labelledby="calorieModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="calorieModalLabel">Calorie Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="calorieForm">
+          <div class="mb-2">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" class="form-control" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" name="height" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" name="weight" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label for="activityLevel">Activity Level</label>
+            <select id="activityLevel" name="activityLevel" class="form-control" required>
+              <option value="sedentary">Sedentary</option>
+              <option value="lightly active">Lightly Active</option>
+              <option value="moderately active">Moderately Active</option>
+              <option value="very active">Very Active</option>
+              <option value="extra active">Extra Active</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="goal">Goal</label>
+            <select id="goal" name="goal" class="form-control" required>
+              <option value="maintain weight">Maintain Weight</option>
+              <option value="lose weight">Lose Weight</option>
+              <option value="gain weight">Gain Weight</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-danger mt-2">Calculate</button>
+        </form>
+        <div class="mt-3" id="calorieResult"></div>
+      </div>
+    </div>
+  </div>
+</div>
   <footer class="footer text-white text-center py-3">
     <div class="overlay-footer"></div>
     <div class="container position-relative">
@@ -124,6 +215,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/auth.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/calorieCalculator.js"></script>
 </body>
 </html> 

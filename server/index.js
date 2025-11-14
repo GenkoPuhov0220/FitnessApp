@@ -9,6 +9,7 @@ import authRoutes from "./routes/auth.js";
 import exerciseRoutes from './routes/exerciseRoutes.js';
 import measurementRoutes from './routes/measurementRoutes.js';
 import programRoutes from './routes/programRoutes.js';
+import calorieRoutes from './routes/calorieRoutes.js';
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ app.use("/api/auth", authRoutes);
 app.use('/api/exercises', exerciseRoutes);
 app.use('/api/measurements', measurementRoutes);
 app.use('/api/programs', programRoutes);
+app.use('/api/calories', calorieRoutes);
 
 // --- Start server ---
 const PORT = process.env.PORT || 5000;

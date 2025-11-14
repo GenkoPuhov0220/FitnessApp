@@ -156,3 +156,51 @@ html, body {
   box-shadow: 0 0 10px #ff000099;
 }
   
+
+#floatingCalorieBtn {
+    position: fixed;
+    bottom: 20px; /* разстояние от долния ръб */
+    right: 20px;  /* разстояние от десния ръб */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #dc3545; /* Bootstrap червен */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* над модали и други елементи */
+    transition: transform 0.2s;
+}
+
+#floatingCalorieBtn:hover {
+    transform: scale(1.1);
+}
+
+#toggleTableBtn {
+    position: fixed;
+    bottom: 90px; /* малко над калкулаторния бутон */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #198754; /* зелен */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    transition: transform 0.2s;
+}
+
+#toggleTableBtn:hover {
+    transform: scale(1.1);
+}
