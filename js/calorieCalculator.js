@@ -1,3 +1,4 @@
+
 // Calculator
 const openCalorieModalBtn = document.getElementById('openCalorieModal');
 const calorieModalEl = document.getElementById('calorieModal');

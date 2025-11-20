@@ -256,6 +256,71 @@ html, body {
 }
 
 
+/* Meal Gain for mem */
+.modal-content.beginnerNutrition {
+  border-color: #dc3545;
+}
+.modal-header.beginnerNutrition {
+  background-color: #dc3545;
+}
+
+.modal-content.intermediateNutrition {
+  border-color: #ffc107;
+}
+.modal-header.intermediateNutrition {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modal-content.advancedBulk {
+  border-color: #198754;
+}
+.modal-header.advancedBulk {
+  background-color: #198754;
+}
+/* Cut for men */
+.modal-content.beginnerCutMen {
+  border-color: #dc3545;
+}
+.modal-header.beginnerCutMen  {
+  background-color: #dc3545;
+}
+.modal-content.intermediateCutMen  {
+  border-color: #ffc107;
+}
+
+.modal-header.intermediateCutMen  {
+  background-color: #ffc107;
+  color: #212529;
+}
+.modal-content.advancedCutMen  {
+  border-color: #198754;
+}
+.modal-header.advancedCutMen  {
+  background-color: #198754;
+}
+/* Maintenance for men */
+.modal-content.beginnerMaintenanceMen {
+  border-color: #dc3545;
+}
+.modal-header.beginnerMaintenanceMen  {
+  background-color: #dc3545;
+}
+.modal-content.intermediateMaintenanceMen  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateMaintenanceMen  {
+  background-color: #ffc107;
+  color: #212529;
+}
+.modal-content.advancedMaintenanceMen  {
+  border-color: #198754;
+}
+.modal-header.advancedMaintenanceMen  {
+  background-color: #198754;
+}
+
+
 
 /*линкове и списъци вътре в модала */
 .modal-body ul {
@@ -314,3 +379,4 @@ html, body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
