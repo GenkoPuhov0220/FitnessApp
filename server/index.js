@@ -10,6 +10,7 @@ import exerciseRoutes from './routes/exerciseRoutes.js';
 import measurementRoutes from './routes/measurementRoutes.js';
 import programRoutes from './routes/programRoutes.js';
 import calorieRoutes from './routes/calorieRoutes.js';
+import mealProgramRoutes from './routes/mealPragramRoutes.js';
 
 dotenv.config();
 
@@ -37,7 +38,7 @@ app.use('/api/exercises', exerciseRoutes);
 app.use('/api/measurements', measurementRoutes);
 app.use('/api/programs', programRoutes);
 app.use('/api/calories', calorieRoutes);
-
+app.use('/api/mealprograms', mealProgramRoutes);
 // --- Start server ---
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
