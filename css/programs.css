@@ -256,7 +256,7 @@ html, body {
 }
 
 
-/* Meal Gain for mem */
+/* Meal Gain for men */
 .modal-content.beginnerNutrition {
   border-color: #dc3545;
 }
@@ -317,6 +317,66 @@ html, body {
   border-color: #198754;
 }
 .modal-header.advancedMaintenanceMen  {
+  background-color: #198754;
+}
+/* Meal Gain for women */
+.modal-content.beginnerNutritionWomen {
+  border-color: #dc3545;
+}
+.modal-header.beginnerNutritionWomen {
+  background-color: #dc3545;
+}
+.modal-content.intermediateNutritionWomen {
+  border-color: #ffc107;
+}
+.modal-header.intermediateNutritionWomen {
+  background-color: #ffc107;
+  color: #212529;
+}
+.modal-content.advancedNutritionWomen {
+  border-color: #198754;
+}
+.modal-header.advancedNutritionWomen {
+  background-color: #198754;
+}
+/* Cut for women */
+.modal-content.beginnerCutWomen {
+  border-color: #dc3545;
+}
+.modal-header.beginnerCutWomen  {
+  background-color: #dc3545;
+}
+.modal-content.intermediateCutWomen  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateCutWomen  {
+  background-color: #ffc107;
+  color: #212529;
+}
+.modal-content.advancedCutWomen  {
+  border-color: #198754;
+}
+.modal-header.advancedCutWomen  {
+  background-color: #198754;
+}
+/* Maintenance for women */
+.modal-content.beginnerMaintenanceWomen {
+  border-color: #dc3545;
+}
+.modal-header.beginnerMaintenanceWomen  {
+  background-color: #dc3545;
+}
+.modal-content.intermediateMaintenanceWomen  {
+  border-color: #ffc107;
+}
+.modal-header.intermediateMaintenanceWomen  {
+  background-color: #ffc107;
+  color: #212529;
+}
+.modal-content.advancedMaintenanceWomen  {
+  border-color: #198754;
+}
+.modal-header.advancedMaintenanceWomen  {
   background-color: #198754;
 }
 

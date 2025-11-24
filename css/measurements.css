@@ -1,42 +1,31 @@
-
+/* Общи настройки */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-
   background: linear-gradient(135deg, #000 50%, #e53935 50%);
   background-size: cover;
   display: flex;
   flex-direction: column;
-    padding-top: 35px;
 }
+
 .navbar {
-  padding: 5px;
+  padding: 10px;
   margin: 0;
   width: 100%; 
   position: fixed; 
   top: 0;
   left: 0;
+  z-index: 100; /* Добавяме по-висок индекс, за да стои над останалото съдържание */
 }
 
 .navbar .container-fluid {
   display: flex;
   justify-content: space-between;  
   align-items: center;  
-  width: 100%; 
-  padding: 0 15px;
 }
 
-.navbar button {
-  margin-left: 5px; 
-  padding: 5px 10px; 
-}
-
-.navbar .navbar-nav {
-  margin-left: 0;
-  margin-right: 0;
-}
 #welcome {
   margin: 0;  
   font-size: 1.0rem;
@@ -44,23 +33,26 @@ html, body {
   text-align: center;
 }
 
-/* Form */
+/* Формата с измерванията */
 .measurements-section {
   padding: 60px 0; 
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  height: 100vh; 
+  align-items: flex-start;
+  flex-direction: row;  /* Стандартно подреждане на ред */
+  height: 100vh;
+  flex-wrap: wrap;
+  margin-top: 70px;  /* Разстояние от навигационната лента */
 }
 
 .measurements-card {
   background-color: rgba(0, 0, 0, 0.7); 
   padding: 20px;
-  max-width: 400px; 
+  max-width: 400px;
   margin: 0 auto;
+  width: 100%;
   box-sizing: border-box;
-  height: auto;
   border-radius: 5%;
 }
 
@@ -73,7 +65,7 @@ html, body {
 .measurements-card input,
 .measurements-card button {
   margin-bottom: 12px;
-  padding: 8px;
+  padding: 10px;
   width: 100%;
   border-radius: 5px;
   font-size: 0.95rem;
@@ -89,7 +81,7 @@ html, body {
   background-color: #e53e3e;
 }
 
-/* Image Section */
+/* Изображение */
 .image-container {
   text-align: center;
   margin-top: 20px; 
@@ -107,20 +99,18 @@ html, body {
   margin: 0 auto;  
 }
 
-/* Measurements table*/
+/* Таблица с измерванията */
 .measurements-log-section {
   position: fixed;
   top: 100px; 
-  right: 20px; 
-  margin-top: 30px;
+  right: 20px;
   background-color: #e53935; 
-  padding: 50px;
+  padding: 20px;
   color: white;
   border-radius: 8px;
   height: 600px;
   overflow-y: auto;
 }
-
 
 .measurements-log .card {
   background-color: #e53935; 
@@ -131,43 +121,109 @@ html, body {
 
 .measurements-log .card p {
   margin: 0;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .measurements-log .btn-danger {
   font-size: 0.8rem;
   margin-top: 10px;
-  background-color: #ff6347; 
+  background-color: #ff6347;
   border: none;
 }
 
 .measurements-log .btn-danger:hover {
-  background-color: #e53e3e; 
+  background-color: #e53e3e;
 }
-@media (max-width: 768px) {
+
+/* Мобилни настройки и адаптивност при намаляване на ширината */
+@media (max-width: 1024px) {
+  /* Подреждаме елементите вертикално */
+  .measurements-section {
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    height: auto;
+    margin-top: 100px;  /* Разстояние от навигационната лента */
+  }
+
+  /* Променяме ширината на картата */
+  .measurements-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Променяме изображението на 100% за по-малки екрани */
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Подреждаме таблицата с измерванията */
   .measurements-log-section {
-    width: 100%; 
+    width: 100%;
     margin-top: 20px;
+    padding: 20px;
+    position: relative;
   }
 
   .measurements-log .card {
     padding: 10px;
   }
+
+  /* Променяме подредбата на полетата в картата */
+  .measurements-card .row {
+    flex-direction: column;
+  }
+
+  .measurements-card .col-6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Намаляване на размерите на бутоните и полетата за по-малки екрани */
+  .measurements-card input,
+  .measurements-card button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
 }
 
-/* Footer */
-.footer {
-  position: relative;
-  width: 100%;
-  color: #fff;
-  margin-top: auto; 
-}
+/* Промени за още по-малки екрани (по-малко от 768px) */
+@media (max-width: 768px) {
+  /* Ще променим подредбата на елементите, за да се подреждат една под друга */
+  .measurements-section {
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 90px; /* Разстояние от навигационната лента */
+  }
 
-.footer .overlay-footer {
-  display: none;
-}
+  /* Формата и бутоните ще заемат 100% ширина */
+  .measurements-card {
+    width: 100%;
+  }
 
-.footer p {
-  margin: 0;
-  font-size: 1rem;
+  /* Подреждане на таблицата с измерванията */
+  .measurements-log-section {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .measurements-log .card {
+    padding: 10px;
+  }
+
+  /* Намаляване на размера на полетата за по-малки екрани */
+  .measurements-card input,
+  .measurements-card button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  /* Изображението също заема 100% */
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
 }
