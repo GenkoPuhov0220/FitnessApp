@@ -1,3 +1,4 @@
+/*  GLOBAL  */
 html, body {
   height: 100%;
   margin: 0;
@@ -5,46 +6,35 @@ html, body {
   scroll-behavior: smooth;
   background: linear-gradient(135deg, #000 50%, #e53935 50%);
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-    padding-top: 35px;
+  background-attachment: fixed;
+  padding-top: 55px;
 }
+
+/*  NAVBAR  */
 .navbar {
-  padding: 5px;
+  padding: 6px;
   margin: 0;
-  width: 100%; 
-  position: fixed; 
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
 }
 
 .navbar .container-fluid {
   display: flex;
-  justify-content: space-between;  
-  align-items: center;  
-  width: 100%; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 0 15px;
-}
-.navbar button {
-  margin-left: 5px; 
-  padding: 5px 10px; 
-}
-
-.navbar .navbar-nav {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 #welcome {
-  margin: 0;  
-  font-size: 1.0rem;
+  margin-right: 10px;
+  font-size: 1rem;
   color: white;
-  text-align: center;
 }
 
-
-
-
+/*  HERO  */
 .hero {
   position: relative;
   height: 30vh;
@@ -61,12 +51,6 @@ html, body {
   height: 100%;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
 .hero h1 {
   color: #fff;
   text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
@@ -76,7 +60,35 @@ html, body {
   color: #f5f5f5;
 }
 
+/*  CARDS  */
+.container h2 {
+  color: white;
+  text-shadow: 0 0 15px #ff000099;
+}
 
+.card-simple {
+  background: rgb(225, 225, 225);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.card-simple:hover {
+  transform: translateY(-5px);
+  background: rgba(230, 230, 230, 0.85);
+}
+
+/* Wrap columns properly */
+.info .col-md-3,
+.info .col-sm-6 {
+ padding: auto;
+}
+
+/*  BUTTONS -*/
 .btn-danger {
   background-color: #dc3545;
   border: none;
@@ -88,61 +100,6 @@ html, body {
   box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
 }
 
-.btn-outline-light:hover {
-  color: #000;
-  background-color: #fff;
-}
-
-.container h2{
-    color: white;
-    text-shadow: 0 0 15px #ff000099;
-}
-
-.card-simple {
-  background: rgb(194, 191, 191);
-  border-radius: 10px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.card-simple:hover {
-  transform: translateY(-5px);
-  background: rgba(177, 175, 175, 0.743);
-}
-
-
-.footer {
-  position: relative;
-  width: 100%;
-  color: #fff;
-  margin-top: auto; 
-}
-
-.footer .overlay-footer {
-  display: none;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 12px; /* Space between buttons */
-  margin-top: 15px;
-  margin-bottom: 12px;
-}
-
-.btn-group .btn {
-  flex: 1;
-  min-width: 110px;
-  padding: 6px 12px;
-  font-weight: 600;
-  border-radius: 6px;
-}
-
 .btn-pink {
   background-color: #ff000099;
   color: #fff;
@@ -151,71 +108,96 @@ html, body {
 }
 
 .btn-pink:hover {
-  background-color: #ff000099;
-  color: #fff;
   box-shadow: 0 0 10px #ff000099;
 }
-  
 
-#floatingCalorieBtn {
-    position: fixed;
-    bottom: 20px; /* разстояние от долния ръб */
-    right: 20px;  /* разстояние от десния ръб */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #dc3545; /* Bootstrap червен */
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1050; /* над модали и други елементи */
-    transition: transform 0.2s;
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-#floatingCalorieBtn:hover {
-    transform: scale(1.1);
+.btn-group .btn {
+  flex: 1 1 aiuto;
+  min-width: 0;
+  padding: 6px 12px;
+}
+
+/*  FLOATING BUTTONS */
+#floatingCalorieBtn,
+#toggleTableBtn {
+  position: fixed;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#floatingCalorieBtn {
+  bottom: 20px;
+  background-color: #dc3545;
 }
 
 #toggleTableBtn {
-    position: fixed;
-    bottom: 90px; /* малко над калкулаторния бутон */
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #198754; /* зелен */
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1050;
-    transition: transform 0.2s;
+  bottom: 90px;
+  background-color: #198754;
 }
 
+#floatingCalorieBtn:hover,
 #toggleTableBtn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* Make all 4 cards the same height */
-.info .col-md-3,
-.info .col-sm-6 {
-    display: flex;
+/*  FOOTER  */
+.footer {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  color: #fff;
 }
 
-.card-simple {
-    background: #e0e0e0;
-    border-radius: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/*  MOBILE FIXES  */
+@media (max-width: 576px) {
+.hero {
+    min-height: 18vh;
+    padding: 20px 0;
+  }
+  /* Fix column spacing */
+  .info .col-md-3, 
+  .info .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-simple {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* navbar spacing */
+  #welcome {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 7px;
+  }
 }
