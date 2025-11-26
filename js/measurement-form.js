@@ -9,6 +9,9 @@ document.getElementById("welcome").textContent = `Welcome, ${currentUser}!`;
 document.getElementById("measurements-form").addEventListener("submit", async (event) => {
   event.preventDefault();
   
+    const API = "https://fitnessapp-backend-80fh.onrender.com"
+    //const LOCAL_API = "http://localhost:5000"
+
   const userId = localStorage.getItem("id") // Assuming currentUser holds the userId
 
   const body = {
@@ -26,7 +29,7 @@ document.getElementById("measurements-form").addEventListener("submit", async (e
   }
   
   try {
-    const response = await fetch(`http://localhost:5000/api/measurements/${userId}`, {
+    const response = await fetch(`${API}/api/measurements/${userId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -51,7 +54,7 @@ document.getElementById("measurements-form").addEventListener("submit", async (e
 async function fetchMeasurements() {
     const userId = localStorage.getItem("id")
   try {
-    const res = await fetch(`http://localhost:5000/api/measurements/${userId}`);
+    const res = await fetch(`${API}/api/measurements/${userId}`);
     const measurements = await res.json();
     
     // Render the list of measurements
@@ -83,7 +86,7 @@ function renderMeasurements(measurements) {
 async function removeMeasurement(measurementId) {
   const userId = localStorage.getItem("id"); 
   try {
-    const response = await fetch(`http://localhost:5000/api/measurements/${userId}/${measurementId}`, { method: "DELETE" });
+    const response = await fetch(`${API}/api/measurements/${userId}/${measurementId}`, { method: "DELETE" });
     
     if (response.ok) {
       console.log('Measurement deleted');

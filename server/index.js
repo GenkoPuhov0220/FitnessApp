@@ -27,6 +27,7 @@ app.use(cors({
     "http://localhost:3000",// add for deployment
     process.env.FRONTEND_URL// add for deployment
    ], 
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 // --- Connect to MongoDB ---

@@ -1,3 +1,7 @@
+
+const API = "https://fitnessapp-backend-80fh.onrender.com"
+//const LOCAL_API = "http://localhost:5000"
+
 // --- REGISTER ---
 async function register(event) {
   event.preventDefault();
@@ -18,7 +22,7 @@ async function register(event) {
 
   try {
     // Send data to backend
-    const res = await fetch("http://localhost:5000/api/auth/register", {
+    const res = await fetch(`${API}/api/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, password }),
@@ -61,7 +65,7 @@ async function login(event) {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch(`${API}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

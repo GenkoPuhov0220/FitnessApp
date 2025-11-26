@@ -26,13 +26,16 @@ if (!currentUser) {
     window.location.href = 'login.html';
 }
 
+const API = "https://fitnessapp-backend-80fh.onrender.com"
+//const LOCAL_API = "http://localhost:5000"
+
 // Load entries from server
 async function loadEntries() {
     if (!currentUser) return;
 
     try {
         // ✅ Коригиран път към API
-        const response = await fetch(`http://localhost:5000/api/calories/${currentUser}`);
+        const response = await fetch(`${API}/api/calories/${currentUser}`);
         const data = await response.json();
 
         calorieTableBody.innerHTML = '';
@@ -70,7 +73,7 @@ async function loadEntries() {
 // Add new entry
 async function addEntry(entry) {
     try {
-        const response = await fetch('http://localhost:5000/api/calories', {
+        const response = await fetch(`${API}/api/calories`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -108,7 +111,7 @@ async function editEntry(id) {
     if (!age || !gender || !height || !weight || !activityLevel || !goal) return;
 
     try {
-        const response = await fetch(`http://localhost:5000/api/calories/${id}`, {
+        const response = await fetch(`${API}/api/calories/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -135,7 +138,7 @@ async function deleteEntry(id) {
     if (!confirm('Are you sure you want to delete this entry?')) return;
 
     try {
-        const response = await fetch(`http://localhost:5000/api/calories/${id}`, {
+        const response = await fetch(`${API}/api/calories/${id}`, {
             method: 'DELETE'
         });
         if (response.ok) {

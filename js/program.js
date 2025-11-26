@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  const API = "https://fitnessapp-backend-80fh.onrender.com"
+  //const LOCAL_API = "http://localhost:5000"
+  
   const openBtn = document.getElementById("openCreateWorkout");
   const modal = new bootstrap.Modal(document.getElementById("createProgramModal"));
   const form = document.getElementById("createProgramForm");
@@ -30,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const url = editMode
-        ? `http://localhost:5000/api/programs/${editId}`
-        : "http://localhost:5000/api/programs";
+        ? `${API}/api/programs/${editId}`
+        : `${API}/api/programs`;
       const method = editMode ? "PUT" : "POST";
 
       const response = await fetch(url, {
@@ -61,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!username) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/programs/user/${username}`);
+      const response = await fetch(`${API}/api/programs/user/${username}`);
       const programs = await response.json();
 
       const list = document.getElementById("programList");
@@ -116,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Delete program
   async function deleteProgram(id) {
     try {
-      const response = await fetch(`http://localhost:5000/api/programs/${id}`, { method: "DELETE" });
+      const response = await fetch(`${API}/api/programs/${id}`, { method: "DELETE" });
       loadMyPrograms();
       
     } catch (err) {

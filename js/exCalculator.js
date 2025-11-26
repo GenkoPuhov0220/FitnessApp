@@ -7,12 +7,15 @@ document.getElementById("welcome").textContent = `Welcome, ${currentUser}!`;
 
 let exercise = [];
 
+const API = "https://fitnessapp-backend-80fh.onrender.com"
+//const LOCAL_API = "http://localhost:5000"
+
 // Fetch all exercises from MongoDB when page loads
 async function fetchExercises() {
 
   
   try {
-    const res = await fetch(`http://localhost:5000/api/exercises/${currentUser}`);
+    const res = await fetch(`${API}/api/exercises/${currentUser}`);
     exercise = await res.json();
     render();
   } catch (err) {
@@ -35,7 +38,7 @@ async function addExercise(event) {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/exercises", {
+    const res = await fetch(`${API}/api/exercises`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: currentUser, name, reps }),
@@ -78,7 +81,7 @@ function render() {
 
 async function removeExercise(id) {
   try {
-    await fetch(`http://localhost:5000/api/exercises/${id}`, { method: "DELETE" });
+    await fetch(`${API}/api/exercises/${id}`, { method: "DELETE" });
     await fetchExercises();
   } catch (err) {
     console.error("Error deleting exercise:", err);
@@ -88,7 +91,7 @@ async function removeExercise(id) {
 async function clearAll() {
   if (confirm("Are you sure you want to delete all exercises?")) {
     try {
-      await fetch(`http://localhost:5000/api/exercises/clear/${currentUser}`, { method: "DELETE" });
+      await fetch(`${API}/api/exercises/clear/${currentUser}`, { method: "DELETE" });
       await fetchExercises();
     } catch (err) {
       console.error("Error clearing exercises:", err);
