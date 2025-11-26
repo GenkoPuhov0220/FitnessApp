@@ -16,19 +16,21 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
 app.use(cookieParser());
 
 
 app.use(cors({
-  origin: "http://127.0.0.1:5500", // or your front-end URL
+  origin: [
+    "http://localhost:5500",// add for deployment
+    "http://127.0.0.1:5500",// or your front-end URL
+    "http://localhost:3000",// add for deployment
+    process.env.FRONTEND_URL// add for deployment
+   ], 
   credentials: true
 }));
 // --- Connect to MongoDB ---
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("✅ MongoDB connected"))
 .catch(err => console.error("❌ MongoDB connection error:", err));
 
@@ -39,6 +41,7 @@ app.use('/api/measurements', measurementRoutes);
 app.use('/api/programs', programRoutes);
 app.use('/api/calories', calorieRoutes);
 app.use('/api/mealprograms', mealProgramRoutes);
+
 // --- Start server ---
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
