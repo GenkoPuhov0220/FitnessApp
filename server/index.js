@@ -23,24 +23,18 @@ const allowedOrigins = [
   "http://localhost:5500",
   "http://127.0.0.1:5500",
   "http://localhost:3000",
-  process.env.FRONTEND_URL // твоя Netlify frontend
+  "https://fitnessapp-genkopuhov.netlify.app",
+  //process.env.FRONTEND_URL // твоя Netlify frontend
 ].filter(Boolean);
 
-const corsOptions = {
-  origin: function(origin, callback) {
-    // allow requests with no origin (curl, Postman)
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error("Not allowed by CORS"));
-  },
+app.use(cors({
+  origin: allowedOrigins,
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
-//app.options("/*", cors(corsOptions));
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
+app.options("*", cors());
 
 // --- Connect to MongoDB ---
 mongoose.connect(process.env.MONGO_URI)
