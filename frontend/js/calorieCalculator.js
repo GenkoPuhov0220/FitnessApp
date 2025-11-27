@@ -51,8 +51,8 @@ async function loadEntries() {
                 <td>${entry.goal}</td>
                 <td>${entry.dailyCalorieIntake}</td>
                 <td>
-                    <button class="btn btn-sm btn-primary editBtn" data-id="${entry._id}">Edit</button>
-                    <button class="btn btn-sm btn-danger deleteBtn" data-id="${entry._id}">Delete</button>
+                    <button class="btn-edit" data-id="${entry._id}">Edit</button>
+                    <button class="btn-delete" data-id="${entry._id}">Delete</button>
                 </td>
             `;
             calorieTableBody.appendChild(row);

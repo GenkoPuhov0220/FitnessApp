@@ -172,6 +172,20 @@ html, body {
   font-size: 1rem;
 }
 
+
+.btn-edit,
+.btn-delete {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Color */
+.btn-edit { background-color: #ffc107; color: #fff; }
+.btn-delete { background-color: #dc3545; color: #fff; }
+
 /*  MOBILE FIXES  */
 @media (max-width: 576px) {
 .hero {
@@ -200,4 +214,43 @@ html, body {
   .navbar-toggler {
     padding: 4px 7px;
   }
+
+
+ /* Hide less important columns */
+  th:nth-child(2), td:nth-child(2),  /* Gender */
+  th:nth-child(3), td:nth-child(3),  /* Height */
+  th:nth-child(4), td:nth-child(4)   /* Weight */
+  {
+    display: none !important;
+  }
+
+  /* Make actions compact */
+  td:nth-child(8) {
+    white-space: nowrap;
+  }
+
+  /* Compact action buttons */
+  .btn-edit,
+  .btn-delete {
+    padding: 5px !important;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0; /* hide text */
+  }
+
+  /* Replace text with icons */
+  .btn-edit::after {
+    content: "✏️";
+    font-size: 18px;
+  }
+
+  .btn-delete::after {
+    content: "🗑️";
+    font-size: 18px;
+  }
+  
 }
