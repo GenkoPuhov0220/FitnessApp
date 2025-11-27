@@ -26,7 +26,7 @@ if (!currentUser) {
     window.location.href = 'login.html';
 }
 
-const API = "https://fitnessapp-backend-80fh.onrender.com"
+//const API = "https://fitnessapp-backend-80fh.onrender.com"
 //const LOCAL_API = "http://localhost:5000"
 
 // Load entries from server
