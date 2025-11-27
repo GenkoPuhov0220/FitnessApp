@@ -40,7 +40,7 @@ const corsOptions = {
   optionsSuccessStatus: 204,
 };
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+//app.options("/*", cors(corsOptions));
 
 // --- Connect to MongoDB ---
 mongoose.connect(process.env.MONGO_URI)
