@@ -58,11 +58,11 @@ async function loadEntries() {
             calorieTableBody.appendChild(row);
         });
 
-        document.querySelectorAll('.editBtn').forEach(button => {
+        document.querySelectorAll('.btn-edit').forEach(button => {
             button.addEventListener('click', () => editEntry(button.getAttribute('data-id')));
         });
 
-        document.querySelectorAll('.deleteBtn').forEach(button => {
+        document.querySelectorAll('.btn-delete').forEach(button => {
             button.addEventListener('click', () => deleteEntry(button.getAttribute('data-id')));
         });
     } catch (error) {
