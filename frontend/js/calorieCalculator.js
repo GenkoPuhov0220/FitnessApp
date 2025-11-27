@@ -76,6 +76,7 @@ async function addEntry(entry) {
         const response = await fetch(`${API}/api/calories`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            credentials: "include",
             body: JSON.stringify({
                 username: currentUser,
                 age: Number(entry.age),
@@ -114,6 +115,7 @@ async function editEntry(id) {
         const response = await fetch(`${API}/api/calories/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
+            credentials: "include",
             body: JSON.stringify({ 
                 age: Number(age),
                 gender: gender.toLowerCase(),               

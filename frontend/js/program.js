@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ title, description, username }),
       });
 
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!username) return;
 
     try {
-      const response = await fetch(`${API}/api/programs/user/${username}`);
+      const response = await fetch(`${API}/api/programs/user/${username}`, {credentials: "include"});
       const programs = await response.json();
 
       const list = document.getElementById("programList");
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Delete program
   async function deleteProgram(id) {
     try {
-      const response = await fetch(`${API}/api/programs/${id}`, { method: "DELETE" });
+      const response = await fetch(`${API}/api/programs/${id}`, { method: "DELETE" }, {credentials: "include"});
       loadMyPrograms();
       
     } catch (err) {

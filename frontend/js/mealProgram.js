@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ title, description, username }),
       });
 

@@ -26,20 +26,21 @@ const allowedOrigins = [
   process.env.FRONTEND_URL // твоя Netlify frontend
 ].filter(Boolean);
 
-app.use(cors({
+const corsOptions = {
   origin: function(origin, callback) {
-    // allow requests with no origin (e.g. curl, Postman)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = "The CORS policy for this site does not allow access from the specified Origin.";
-      return callback(new Error(msg), false);
+    // allow requests with no origin (curl, Postman)
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.includes(origin)) {
+      return callback(null, true);
     }
-    return callback(null, true);
+    return callback(new Error("Not allowed by CORS"));
   },
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
-
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  optionsSuccessStatus: 204,
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 // --- Connect to MongoDB ---
 mongoose.connect(process.env.MONGO_URI)

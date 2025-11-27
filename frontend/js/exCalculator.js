@@ -41,6 +41,7 @@ async function addExercise(event) {
     const res = await fetch(`${API}/api/exercises`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: "include",
       body: JSON.stringify({ username: currentUser, name, reps }),
     });
 
