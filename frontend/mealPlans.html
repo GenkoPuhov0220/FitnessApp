@@ -126,30 +126,33 @@ style="position: fixed; bottom: 20px; right: 20px; border-radius:50%; width:50px
 
 <!-- Table of Calorie Entries -->
  <div class="modal fade" id="calorieTableModal" tabindex="-1" aria-labelledby="calorieTableModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg"> <!-- По-голям прозорец за таблицата -->
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="calorieTableModalLabel">Your Calorie Entries</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Height</th>
-              <th>Weight</th>
-              <th>Activity Level</th>
-              <th>Goal</th>
-              <th>Calories</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="calorieTableBody">
-            <!-- Данните ще се добавят чрез JS -->
-          </tbody>
-        </table>
+
+        <div class="table-responsive">
+          <table class="table table-striped text-center align-middle">
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Activity Level</th>
+                <th>Goal</th>
+                <th>Calories</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="calorieTableBody"></tbody>
+          </table>
+        </div>
+
       </div>
     </div>
   </div>
