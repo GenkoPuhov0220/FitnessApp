@@ -12,9 +12,9 @@ router.get("/", (req, res) => {
 // Save a new exercise
 router.post('/', async (req, res) => {
   try {
-    const { username, name, reps } = req.body;
+    const { username, name, reps, series} = req.body;
 
-    if (!username || !name || !reps) {
+    if (!username || !name || !reps || !series) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
 
@@ -26,7 +26,9 @@ router.post('/', async (req, res) => {
     const newExercise = new Exercise({
       userId: user._id,
       name,
-      reps
+      series,
+      reps,
+      createdAt: new Date()
     });
 
     await newExercise.save();

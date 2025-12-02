@@ -217,3 +217,60 @@ h1 {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; 
+  }
+
+  .container2 {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .form-container input, 
+  .form-container button {
+    width: 100%; 
+    font-size: 1.2rem; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+  }
+
+  .form-container input:focus,
+  .form-container button:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); 
+    outline: none; 
+  }
+
+  .form-container button {
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; 
+    cursor: pointer; 
+  }
+
+  .form-container button:hover {
+    background-color: #ff4757;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.7); 
+    transform: scale(1.05); 
+  }
+
+  .total {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar button {
+    padding: 8px 12px;
+  }
+}

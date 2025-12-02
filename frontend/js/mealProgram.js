@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openCreateWorkout");
   const modal = new bootstrap.Modal(document.getElementById("createProgramModal"));
