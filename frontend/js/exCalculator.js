@@ -77,6 +77,7 @@ function render() {
       <p><strong>Exercise:</strong> ${ex.name}</p>
       <p><strong>Series:</strong> ${ex.series}</p>
       <p><strong>Reps:</strong> ${ex.reps}</p>
+      <p><strong>Added on:</strong> ${ex.date}</p> 
         <button class="btn btn-sm btn-outline-danger" onclick="removeExercise('${ex._id}')">Remove</button>
       </div>`;
   });
