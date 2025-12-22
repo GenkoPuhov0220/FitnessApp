@@ -68,16 +68,26 @@ async function fetchMeasurements() {
 function renderMeasurements(measurements) {
   const logDiv = document.getElementById("measurements-log");
   logDiv.innerHTML = "";
-
+  
+  const dateTime = measurements.date
+      ? new Date(measurements.date).toLocaleString("bg-BG", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      : "—";
   measurements.forEach((measurement) => {
     logDiv.innerHTML += `
       <div class="card">
         <p><strong>Chest:</strong> ${measurement.chest} cm</p>
-        <p><strong>Stomach (Navel):</strong> ${measurement.stomachNavel} cm</p>
+        <p><strong>Stomach:</strong> ${measurement.stomachNavel} cm</p>
         <p><strong>Left Arm:</strong> ${measurement.leftArm} cm</p>
         <p><strong>Right Arm:</strong> ${measurement.rightArm} cm</p>
         <p><strong>Left Leg:</strong> ${measurement.leftLeg} cm</p>
         <p><strong>Right Leg:</strong> ${measurement.rightLeg} cm</p>
+        <p><strong>Added on:</strong> ${measurement.dateTime}</p>
         <button class="btn btn-danger btn-sm" onclick="removeMeasurement('${measurement._id}')">Remove</button>
       </div>
     `;
